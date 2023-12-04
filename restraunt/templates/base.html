@@ -1,0 +1,29 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% block link %}
+    {% endblock %}
+</head>
+<body>
+    <nav class="flex  ps-10 bg-[#d9f99d] py-1">
+        <ul class="flex items-center gap-10">
+
+            <li class="w-14"><img src="{% static 'logo.png' %}" alt=""></li>
+            <li class="text-3xl font-bold text-yellow-600">KhAcci vai</li>
+            <li class="hover:underline underline-offset-8 font-bold text-red-500"><a href="{% url 'home' %}">Home</a></li>
+            <li class="hover:underline underline-offset-8 font-bold text-red-500"><a href="{% url 'items' %}">Show Item</a></li>
+            <li class="hover:underline  underline-offset-8 font-bold text-red-500"><a href="{% url 'about' %}">About</a></li>
+        </ul>
+    </nav>
+    <section>
+        {% block content %}
+        {% endblock %}
+    </section>
+</body>
+</html>

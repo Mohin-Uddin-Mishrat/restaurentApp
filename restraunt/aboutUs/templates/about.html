@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock link %}
+
+{% block content %}
+
+
+<div class="h-[100vh] flex items-center">
+    <div class="flex justify-center items-center">
+        <div class="basis-1/2 text-center">
+            <h1 class="font-bold text-4xl text-italic">About Us</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, ipsam itaque? Maiores omnis consequatur veritatis amet molestiae tempora aliquid natus eos sint, ab doloremque dignissimos rem, est error, odit quae?</p>
+        </div>
+        <div>
+            <img class="rounded-lg w-full" src="{% static 'about.jpg' %}" alt="">
+        </div>
+    </div>
+</div>
+{% endblock %}
